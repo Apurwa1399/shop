@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cart = ({ items, updateQuantity }) => {
+const Cart = ({ items, updateQuantity, removeItem }) => {
     return (
         <>
             <h3 className='h3-cart'>Cart Items</h3>
@@ -19,7 +19,9 @@ const Cart = ({ items, updateQuantity }) => {
                     <div className='add-minus'>
                     {!item.isGift && (
                         <>
-                        <button className="minus" onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                       <button
+                    className="minus"
+                    onClick={() => {if (item.quantity === 1) {removeItem(item.id);} else {updateQuantity(item.id, item.quantity - 1);}}} >-</button>
                         <span>{item.quantity}</span>
                         <button className="plus" onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
                         </>

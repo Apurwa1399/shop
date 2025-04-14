@@ -130,3 +130,18 @@ body{
 .h3-cart{
   margin: 20px 0;
 }
+@media (max-width:500px){
+  .container {
+    padding: 1rem;
+    max-width: 500px;
+  }
+  .products{
+    display: block;
+  }
+  .product{
+    margin: 10px 0;
+  }
+  .subtotal {
+    justify-content: flex-start;
+  }
+}
