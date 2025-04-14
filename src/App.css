@@ -4,11 +4,11 @@ body{
   padding: 0;
 }
 
-.conatiner{
+.container{
   padding: 2rem;
   max-width: 800px;
   margin: auto;
-  background: #fff;
+  background: #e9e9e9;
   border-radius: 10px;
 }
 
@@ -21,8 +21,12 @@ body{
   border: none;
   background: #fff;
   flex: 1;
-  text-align: center;
+  text-align: left;
   border-radius: 8px;
+  padding: 10px;
+}
+.product h3{
+  margin: 0;
 }
 .quantity{
   display: flex;
@@ -41,10 +45,14 @@ body{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 }
 
 .cart {
   margin-top: 2rem;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .cart-item {
@@ -61,7 +69,7 @@ body{
 
 .progress-bar {
   background: #eee;
-  height: 20px;
+  height: 10px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -75,6 +83,40 @@ body{
 }
 
 .gift-message {
-  color: #3877dd;
+  color:#3877dd ;
   font-weight: bold;
+}
+.cart-summary{
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bg-blue{
+  background:#dfe8f6;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+.subtotal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.minus{
+  background: red;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: white;
+}
+.plus{
+  background: #37b337;
+  border: none;
+  padding: 4px 9px;
+  border-radius: 4px;
+  color: white;
+}
+.add-minus{
+  justify-content: center;
+  align-items: center;
 }

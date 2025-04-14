@@ -1,24 +1,28 @@
 import React from 'react'
 
-const Cart = ({ items, updateQuantity, removeItem }) => {
+const Cart = ({ items, updateQuantity }) => {
     return (
       <div className="cart">
-        <h2>Your Cart</h2>
         {items.length === 0 && <p>No items added.</p>}
         {items.map(item => (
           <div className="cart-item" key={item.id}>
-            <span>{item.name}</span>
             <div>
+           <div>
+           <span>{item.name}</span>
+           </div>
+            <div>
+            <span>₹{item.price} x {item.quantity}</span>
+            </div>
+            </div>
+            <div className='add-minus'>
               {!item.isGift && (
                 <>
-                  <button onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>-</button>
+                  <button className="minus" onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                  <button className="plus" onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
                 </>
               )}
             </div>
-            <span>₹{item.price * item.quantity}</span>
-            {!item.isGift && <button onClick={() => removeItem(item.id)}>X</button>}
           </div>
         ))}
       </div>
