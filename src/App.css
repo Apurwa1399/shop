@@ -49,9 +49,8 @@ body{
 }
 
 .cart {
-  margin-top: 2rem;
   background: #fff;
-  padding: 10px;
+  padding: 30px 10px;
   border-radius: 8px;
 }
 
@@ -119,4 +118,15 @@ body{
 .add-minus{
   justify-content: center;
   align-items: center;
+}
+.empty{
+  text-align: center;
+}
+.empty span{
+  margin: 0;
+ color: #919191;
+ display: block;
+}
+.h3-cart{
+  margin: 20px 0;
 }
